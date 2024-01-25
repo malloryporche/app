@@ -1,6 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { Button } from "@chakra-ui/react";
+
+const handleSumbit = (e: React.MouseEvent<HTMLButtonElement>) => {
+  e.preventDefault();
+  console.log("Button clicked!");
+};
 
 function App() {
   return (
@@ -18,6 +24,9 @@ function App() {
         >
           Learn React
         </a>
+        <Button colorScheme="blue" onClick={(e) => handleSumbit(e)}>
+          Button
+        </Button>
       </header>
     </div>
   );
